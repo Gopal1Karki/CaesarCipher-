@@ -6,6 +6,7 @@ import (
 	"os"
 	"os/exec"
 	"runtime"
+	"strings"
 	"time"
 )
 
@@ -43,7 +44,8 @@ func encryption() {
 		}
 	}
 	fmt.Println("The Encrypted key text: ")
-	fmt.Println(b)
+	c := strings.Join(b, "")
+	fmt.Println(c)
 A:
 	var ex string
 	fmt.Printf("Press 'e' to exit or 'c' to return to mainmenu!! ")
@@ -70,7 +72,6 @@ func decryption() {
 	fmt.Printf("Enter the key")
 	fmt.Scanln(&key)
 	var text int
-
 	var b = make([]string, len(sentence))
 	for i := 0; i < len(sentence); i++ {
 		if int(sentence[i]) >= 97 && int(sentence[i]) <= 122 {
@@ -87,7 +88,8 @@ func decryption() {
 		}
 	}
 	fmt.Println("The Decrypted key text: ")
-	fmt.Println(b)
+	c := strings.Join(b, "")
+	fmt.Println(c)
 A:
 	var ex string
 	fmt.Printf("Press 'e' to exit or 'c' to return to mainmenu!! ")
